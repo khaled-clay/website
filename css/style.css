@@ -1,0 +1,999 @@
+*,html,body{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    transform: .5s ease-in-out;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    
+}
+:root{
+    --main-color:#f50057;
+}
+.main{
+    color: var(--main-color);
+}
+.clear{
+    clear:both;
+}
+.container{
+    width: 1300px;
+    margin: auto;
+    padding: 0 15px 0 15px;
+}
+
+.container-brand{
+    width: 1080px;
+    padding:  0 15px;
+    margin: auto;  
+    
+}
+body{
+    width: 100%;
+}
+.hidden{
+    display: none;
+}
+.row{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;  
+    margin-top: 20px;
+}
+
+.row.headr{
+     align-items: center;
+}
+section{
+    margin-top: 70px;
+}
+nav{
+    display: flex;
+    text-transform: capitalize;
+    padding-top: 20px;
+}
+nav .logo {
+    text-transform: uppercase;
+    width: 50%;
+    
+}
+nav .logo h1{
+    display: inline-block;
+    border: 2px solid #000;
+    padding: 10px;
+    position: relative;
+    
+}
+.nav-icon i:first-of-type{display: none}
+.nav-icon i{margin-right: 20px;font-size: 25px;}
+.nav-icon{
+    margin-top: 10px;
+    font-size: 20px;
+    color:  var(--main-color);
+}
+nav .logo h1::after{
+    position: absolute;
+     z-index: 2;
+    font-size: 10px;
+    text-align: center;
+    bottom: 0px!important;
+    left: 50%!important;
+    display: inline-block;
+    color: var(--main-color);
+    content: "online market";
+    transform:translateX(-50%);
+}
+
+nav .logo h1 span{
+    color: var(--main-color);
+}
+nav .navigation{
+    width: 50%;
+   
+}
+nav .navigation ul{
+    list-style: none;
+    text-align: right;
+    
+}
+
+nav .navigation ul li:hover a , .navigation ul .active{color: var(--main-color);}
+nav .navigation ul li{
+    display: inline-block;
+    margin-right: 20px;
+    font-size: 20px;
+    margin-top: 10px;
+}
+nav .navigation ul li a{
+    text-decoration: none;
+    color: #555;
+}
+@media(max-width:768px){
+    nav .navigation {
+            width: 100%;  position: absolute;
+            left: 0;
+            right: 0;
+           z-index: 2;
+            top: 55px;
+    padding: 0;}
+    #nav{
+        background: black;
+        overflow: hidden;
+        transition: all 1s;
+        top: 9%;
+    }
+    nav .navigation ul{
+     position: absolute;
+        width: 100%;
+        right: 0;
+        left: 0; 
+       top: 20px;
+        background: black;
+        height: 0;
+        padding: 0;
+        
+        
+         }
+    nav .navigation ul li{
+        display: block;
+        float: none;
+        color: #fff!important;
+        margin: 10px 0 0 0;
+        border: none;
+        padding-right: 10px;
+        border-bottom: 1px solid #fff;
+    }
+    .nav-icon{
+       position: absolute;
+        right: 10px;
+    }
+    .nav-icon i:first-of-type{display: inline-block;}
+    .nav-icon i.active::after{
+          content: "";
+         width: 0;
+        height: 0;
+        border-left: 15px solid transparent;
+        border-top: 15px solid transparent;
+        border-right: 15px solid transparent;
+        border-bottom: 15px solid #000;
+        position: absolute;
+        bottom: -20px;
+        right: 60%;
+        transform: translateX(-50%);
+       
+    }
+}
+.col-2{
+    width: 50%;
+    margin-top: 70px;
+}
+.col-2 img{
+max-width: 100%;
+    padding: 30px;
+}
+.col-2 h2{
+    font-size: 50px;
+    line-height: 60px;
+    margin-bottom: 20px;
+ 
+}
+.desc-cont{
+    padding: 50px;
+}
+.desc-cont p{
+    line-height: 1.7;
+    font-size: 15px;
+}
+.btn{
+    display: inline-block;
+    padding: 5px 15px;
+    background: var(--main-color);
+    color: #fff;
+    text-decoration: none;
+    margin: 20px;
+    font-size: 22px;
+    border-radius: 10px;
+}
+.btn:hover{
+    background:#da0550;
+}
+header{
+    padding: -10px 0 0 0 ;
+    background-image: radial-gradient(#fff,#b9a47d);
+    height: 100vh;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+@media(max-width:768px){
+    .row.headr{
+     display: block;
+        padding: 0;
+        margin: 0;
+    }
+    .col-2{width: 100%; margin-top: 10px;}
+    .col-2 h2{
+        font-size: 20px;
+        line-height: normal;
+        }
+    header{
+     height: 120vh;
+    }
+}
+/*end th header and start the featurd------------------------------------------------------------*/
+.categores{
+    background: #f6f6f6;
+    padding: 20px 0;
+}
+.col-3{
+    flex-basis: 30%;
+    margin: 1%;
+    text-align: center;
+    max-height: 400px;
+   
+}
+.col-3 img{
+    max-width: 95%;
+    height: 100%;
+  
+    
+}
+@media(max-width:768px){
+.categores .row{
+    width: 100%;
+    display: block;
+    height: auto;
+    }
+    .categores .col-3{
+        width: 31%;
+            float:left;
+        margin-left: 1%;
+        
+    }
+ 
+    .categores{
+        height: auto;
+    }
+    .categores .col-3 img{
+        max-width: 200px;
+        max-height: 200px;
+    }
+}
+@media(max-width:400px){
+    .cate{ 
+        display: block;
+        float: none;
+        text-align: center;
+        width: 100%!important;
+    }}
+/*end our categres and stratour producte--------------------------------------------- */
+.prouduct .row{
+    margin-top: 50px;
+    
+}
+.col-4{
+    flex-basis: 25%;
+    max-height: 400px;
+    position: relative;
+   transition: .5s all ease-in-out;
+   
+}
+.col-4:hover{
+    top: -10px;
+}
+.col-4 img{
+    max-width: 95%;
+    height: 300px;
+    
+}
+.col-4 h3:last-child{color: #aaa}
+.col-4 h3{
+    margin: 4px 0
+}
+.spic::first-letter{color: var(--main-color); text-decoration: line-through; font-weight: bolder}
+.spic{
+    text-align: center;
+    font-size: 22px;
+    margin: 20px auto 80px;
+    position: relative;
+    padding-top: 30px;
+}
+.spic:after{
+    content: "";
+    width: 100px;
+    height: 5px; 
+    border-radius: 20%;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--main-color);
+}
+.prouduct  .rating {
+    color:var(--main-color);
+   
+    
+}
+.prouduct{
+    color:#3f3d56;
+    padding-bottom: 30px
+}
+@media(max-width:768px){
+    .prouduct .row{display: block;}
+    .col-4{
+        width: 49%;
+        float: left;
+        height: 400px;
+    }
+    .prouduct{
+        height: auto;
+        color: darkgrey
+    }
+}
+
+.smallPolit{
+    text-align: left!important;
+    width: 100%;
+    list-style: none;
+    padding-top: 30px;
+    
+    
+}
+.smallPolit li:hover , .smallPolit li.active{background:var(--main-color);color: #3f3d56;}
+.smallPolit li span{}
+.smallPolit li{
+    display: inline-block;
+    margin-right: 0 20px;
+    padding:15px  20px;
+    border: 1px solid var(--main-color);
+    font-weight: bolder;
+    color: var(--main-color);
+    font-size:20px;
+    border-radius: 2PX;
+    transition: .3s;
+    overflow: hidden;
+}
+/*end the section and start offer*/
+
+
+
+.offer h3{
+    margin-bottom: 30px;
+}
+.offer h1{
+    margin: 30px 0 ;
+    font-size: 35px
+}
+.offer p{
+    line-height:1.7;
+    color: #000;
+}
+.offer .col-2:first-child{text-align: center;}
+.offer img{
+   width: 90%;
+    height: 80%;
+}
+
+
+.offer{
+    border-bottom: 3px solid #cccc;
+  
+    
+}
+.offer .col-2:last-of-type{
+  
+      background-image: url("../img/brand%20(10).svg");
+   background-position: right;
+    background-repeat: no-repeat;
+}
+@media (max-width:768px) {
+    .row{
+        display: block;
+        height: auto;
+        text-align: center;
+    }
+    .offer img{
+        width: 300px; 
+        height: 300px;
+    }
+    
+    .mid {
+        text-align: center;
+        width: 100%!imprtant;
+        background: none!important
+    }
+    .offer{
+        height: auto;
+    }
+    
+}
+/*start the logi in section ----------------------------------------------------------------------------------------------------------------*/
+.log-in{
+    width: 100%;
+    height: 100vh;
+  
+    background-image: radial-gradient(#fff,#b9a47d);
+    background-size: cover;
+}
+.log-in .col-2:first-of-type {}
+.log-in .col-2:first-of-type img{
+    width: 100%;
+    height: 100%;
+}
+.login-cont{
+    width: 80%;
+    margin:auto;
+    text-align: center;
+   
+}
+form{
+    width: 100%;
+}
+.avatar{
+    width: 200px;
+}
+.input-div{
+    display: grid;
+    grid-template-columns: 7% 93%;
+    padding: 20px;
+    margin-top: 20px;
+    border-bottom: 2px solid #fff;
+    width: 90%;
+    margin: auto;
+    position:relative;
+    transform: all .5s ease-in-out!important; 
+    
+}
+.input-div:first-of-type{
+    margin-bottom: 30px;
+}
+.input-div:after , .input-div:before{
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background:red;
+    content: "";
+    bottom: -2px;
+    background:var(--main-color);}
+.input-div:after{
+    left: 0;
+}
+.input-div:before{
+    right: 0;
+}
+.i{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+.i i {
+    font-size: 30px;
+    color:#3f3d56 ;
+}
+.login-cont{
+ 
+}
+.input-div > div{
+    position: relative;
+    
+}
+.input-div >div h5{
+    position: absolute;
+    left: 15%;
+    top: 50%;
+    transform: translateY(-50%);
+    text-transform: uppercase;
+    color:#3f3d56;
+    font-size: 20px; 
+    transition: .3s;
+}
+.input-div.focus h5{
+    top: -20px;
+    left: 2%;
+    font-size: 15px;
+    color: var(--main-color);
+}
+.input-div.focus i{
+    color: var(--main-color)
+}
+.input-div.focus:after , .input-div.focus:before{
+    width: 50%;
+    content: "";
+    bottom: -2px;
+}
+.input{
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    background: none;
+    top: 0;
+    left: 0;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    z-index: 2;
+    line-height: 40px;
+    opacity: 0.02;
+    margin-left: 20px;
+    
+}
+form a{
+    display: block;
+    float: right;
+    color: #000;
+    text-decoration: none;
+    margin-right: 20px;
+    margin-top: 20px;
+    font-size: 17px;
+    overflow: hidden; 
+    transition: .3s; 
+}
+form a:hover{
+    color: var(--main-color);
+}
+
+
+
+
+
+/*end the offer and begin the testmoials v--------------------------------------------------------------------------------------------------*/
+.testmoials{
+    margin-top: 150px;
+     background: #f6f6f6;
+    padding: 60px 0;
+    color:#3f3d56;
+    
+}
+.test{
+    background: #fff;
+    padding: 20px 0;
+    border-radius: 5px;
+    border: 2px solid #aaa;
+    text-align: center;
+    position: relative;
+    transition:all s .5s ease-in-out;
+    height: auto;
+    padding-bottom: 20px;
+    transition:  all 1s linear
+}
+.test i{
+    color: var(--main-color);
+    font-size: 60px;
+    line-height: 60px;
+}
+.test .text{
+    margin: 10px 20px 0 ;
+}
+.test img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+.test h3::first-letter{color: var(--main-color);}
+.test:hover h3{
+    text-decoration: line-through;
+    
+}
+.test:hover{
+    top: -20px;
+}
+.test .rating i{
+    font-size: 16px;
+}
+@media(max-width:768px){
+    .test{
+        margin-bottom: 40px;
+    }
+    
+
+
+}
+/*end the test monials and strat my barnd*/
+.brand .row{margin: 0;height: 250px;}
+.brand {
+    margin-top: 100px;
+}
+.col-5:hover{filter: none}
+.col-5{
+    width:20%;
+    filter: grayscale(1);
+    height: 100px;
+    
+}
+.col-5 img{
+    min-width: 90%;
+    max-width: 95%;
+    height: 100px;
+    
+    
+}
+@media(max-width:768px){
+    .brand .row{
+        display: flex;
+        height: auto;
+        margin-bottom: 20px;
+    }
+    .brand .row .col-5{
+        height: 100px;
+      overflow: hidden;
+    }
+    
+}
+/*last section the--------------------------------------------------------------------------------- foter*/
+footer{
+    background: black;
+    color: #fbfbfb;
+    padding: 40px 0;
+    
+}
+footer .row{
+    margin: 0;
+    height: 250px;
+}
+.col-4-f{
+    flex-basis: 23%;
+    margin: 1px;
+    text-align: center;
+}
+.col-4-f h3{
+    color: #fff;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+.col-4-f .logo h1{
+    display: inline-block;
+    border: 2px solid #fff;
+   padding:0 20px;
+    position: relative;
+    padding-bottom: 10px;
+    
+}
+ .col-4-f .logo h1::after{
+    position: absolute;
+     z-index: 2;
+    font-size: 10px;
+    text-align: center;
+    bottom: -4px!important;
+    left: 50%!important;
+    display: inline-block;
+    color: var(--main-color);
+    content: "online market";
+    transform:translateX(-50%);
+     background: black;
+     text-transform: uppercase;
+}
+.col-4-f p{
+    margin-top: 20px;
+    padding: 0 20px;
+}
+.col-4-f ul li:hover{color: var(--main-color)}
+.col-4-f ul li{margin: 7px  0 0 0; cursor: pointer; transition: .5s all ease-in-out;}
+.col-4-f ul{
+    list-style: none;
+}
+.col-4-f img{
+    width: 100%;
+    height: 100px;
+}
+.copyRight{
+    height: 10px;
+    border:none;
+    border-top: 2px solid #bfbfbfbf;
+    padding-top: 20px;
+    margin-top: 40px;
+}
+
+
+
+@media(max-width:768px){
+    .container{
+      margin: auto;
+        width: 98%!important;
+    }
+    .container-brand{
+        width: 95%;
+        margin: auto;
+    }
+    footer .row{
+        height: auto;
+    }
+    .col-4-f{
+        margin-bottom: 40px;
+    }
+   
+
+}
+@media(max-width:400px){
+    .col-2 , .col-3 , .col-4{
+        display: block;
+        float: none;
+        text-align: center;
+        width: 100%;
+    }
+    .container-brand{
+        width: 99%;
+        margin: auto;
+    }
+}
+/* start the second page it  producte ---------------------------------------------------*/
+producte-price{
+    height: 100vh;
+    margin-bottom: 30px;
+    border-top: 3px solid #eee;
+    color: #3f3d56;
+}
+
+.header .row{
+    margin: 100px 0;
+}
+.gellary{
+   
+    max-height: 600px;
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    border: 3px solid #eee;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    color: #3f3d56;
+    
+}
+.gellary .main-iamge img{
+    max-width: 100%;  
+    height: 500px;
+min-height: 90%; 
+margin-top:10px;
+max-height: 100%;}
+
+.gellary .main-iamge{
+    width 90%;
+    height: 400px;
+    margin: 20px 0;
+   
+    overflow: hidden;
+    
+}
+.gellary .second-iamge{
+  
+    height: 100px;
+    display: flex;
+     width: 100%;
+}.gellary .second-iamge img{
+     min-width: 20%;
+    min-height: 120px;
+    max-height: 25%;
+   transform: scale(2);
+    border-radius: 20px;
+    }
+#textFromPro{
+    color: #aaa;
+    text-transform: capitalize;
+    
+    
+}
+#headingFromPro{
+    margin: 10px 0 40px 0;
+    font-size: 30px;
+    
+}
+ .producte-price .select{
+    display: block;
+   text-transform: uppercase;
+    color: var(--mian-color);
+    font-size: 20px;
+    
+}
+ .producte-price input{
+    width: 40px;
+    font-size: 20px;
+     margin-right: 20px;
+}
+ .producte-price p{
+    padding: 20px;
+    line-height: 1.7;
+    
+}
+.newRating{
+    color: var(--main-color);
+    font-size: 20px;
+    margin-top: 20px;
+}
+.producte-price h6{
+    text-transform:uppercase;
+}
+.footer-image:first-child{margin-top: 20px;}
+.footer-image{
+    width: 100%;
+   max-height: 70px;
+    margin-top: 3px;
+    cursor: pointer;
+     
+   
+}/*start the section of  cart our pric -----------------------------------------------------------*/
+.store{
+    padding: 40px ;
+    background: #fbfbfb;
+    margin-top: 130px;
+    color: #3f3d56;
+}
+.background{background: var(--main-color); color: #fff;}
+.main-line{
+    display: flex;
+    width: 100%!imprtant;
+    padding: 5px 0;
+  
+    
+}
+.main-line .first{width: 70%; text-align: left}
+.main-line .second{width 10%;}
+.main-line .last{ width:  40%; text-align: right;}
+.sold{
+    max-width:100%;
+    max-height: 100px;
+    overflow: hidden;
+.}
+.first{
+   display: flex;
+}
+.first img{
+    flex-basis:     inlineblock20%;
+    max-width: 21%;
+    height: 80px;
+    max-height: 120px;
+  
+    margin-right: 20px;
+}
+.details{
+    width: 75%;
+    float: right;
+}
+.details h2{ margin: 10px; font-weight: bold}
+.details h3{ margin: 10px; font-weight: bolder; color: #aaa}
+.details h6{ margin: 10px; font-weight: bolder; color: var(--main-color);}
+.unmberFromJava , .unmberFromJavaForClac{
+    font-weight: bold;
+    margin: 20px;
+    padding: 0 10px;
+    font-size: 25px;
+}
+
+/*this is  totla section + iam tird form this fuck */
+.total{
+    width: 40%;
+    background: #fff;
+    position: relative;
+    right: 0;
+    float: right;
+    border-top: 4px solid #3f3d56;
+ 
+}
+
+.total .subtotale{
+    display: flex;
+    margin: 20px 20px;
+    font-weight: bolder;
+}
+.total .subtotale div{
+    flex-basis: 50%;
+}
+.total .subtotale .right{ text-align: right;}
+.total .subtotale .left{
+    text-align: left;
+}
+.total .end{border-top:2px solid var(--main-color); padding: 20px; margin: 0; font-weight: 1000; }
+.install{
+    width: 90px; 
+    height: 90px;
+    position: fixed;
+    top: 10%;
+    right: 10%;
+    background: #3f3d56;
+    border-radius: 50%;
+    border-top: none;
+    border-left: none;
+    display: none;
+   ;
+    
+}
+select{
+    margin: 20px 0;
+}
+.selection-done{
+   display: inline-block;
+    font-size: 20px;
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #3f3d56;
+    padding: 10px;
+    color: #fff;
+    font-weight:bolder;
+    border-radius: 10px;
+    transition: .3s;
+    display: none;
+
+}
+.selection-done span{
+    color: var(--main-color);
+}
+
+.icon{
+    width:100%;
+    height: 100%;
+    color: var(--main-color);
+display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icon i{
+    font-size: 60px;
+    line-height: 60px;
+}
+@media (max-width:768px) {
+    .log-in .col-2:first-of-type{
+        display: none;
+    }
+    .log-in .col-2{
+        width: 100%;
+    }
+    .smallPolit li{
+        padding: 10px;
+    }
+  
+    form{
+        width: 100%;
+    }
+    .gellary{
+        height: 300px;
+    }
+    .gellary .main-iamge {
+        width: 100%;
+         height: 200px;
+        margin:0;
+        padding: 0;
+        border-bottom: 1px solid #ccc;
+    }
+    .gellary .second-iamge{
+        height: 100px;
+        overflow: hidden;
+    }
+    .gellary .second-iamge img{
+        height: 100px;
+        background-size: contain;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        
+    }
+    #numberOfPace{
+        margin: 10px;
+    }
+    .store{
+        padding: 0;
+    }
+    .main-line .sold .lastname {  font-size: 12px!important; }
+    .main-line .sold h3 {  font-size: 10px; }
+    .main-line .sold h6 {  font-size: 8px; }
+    .main-line .sold{ width: 90%}
+    .main-line .second{ width:5%; padding: 5px; font-size: 15px}
+    .main-line .last{width: 5%;   padding: 5px;  font-size: 15px;}
+    .total{
+        width: 70%;
+    }
+    .last {
+      
+    }
+    .install{
+        width: 50px;
+        height: 50px;
+    }
+    .install i{
+        font-size: 25px;
+    }
+   nav .logo h1{
+        padding: 5px!important;
+    }
+}
